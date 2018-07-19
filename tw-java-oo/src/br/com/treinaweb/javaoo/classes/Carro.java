@@ -11,8 +11,5 @@ public class Carro extends Veiculo {
 		this.setNome(nome);
 		this.setMarca(marca);
 	}
-	
-	public Carro(String nome, float combustivel) { // Carro(String, String, String)
-		
-	}
+
 }
