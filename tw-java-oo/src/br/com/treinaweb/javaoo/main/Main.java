@@ -6,12 +6,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		Veiculo corsa = new Veiculo();
-		corsa.marca = "GM";
-		corsa.nome = "Corsa";
+		corsa.setMarca("GM");
+		corsa.setNome("Corsa");
+		System.out.println(corsa.getNome());
 		corsa.ligar();
 		Veiculo celta = new Veiculo();
-		celta.marca = "GM";
-		celta.nome = "Celta";
+		celta.setMarca("GM");		
+		celta.setNome("Celta");
+		System.out.println(celta.getNome());
 		celta.ligar();
 	}
 	
