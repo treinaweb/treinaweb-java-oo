@@ -34,7 +34,7 @@ public class Veiculo {
 		if (chassi.length() == 5) {
 			this.chassi = chassi;
 		} else {
-			throw new ChassiInvalidoException("O chassi informado é inválido.");
+			throw new ChassiInvalidoException(chassi);
 		}
 	}
 
