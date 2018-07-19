@@ -3,7 +3,7 @@ package br.com.treinaweb.javaoo.classes;
 import br.com.treinaweb.javaoo.excecoes.AceleracaoVeiculoLigadoException;
 import br.com.treinaweb.javaoo.excecoes.FrenagemVeiculoDesligadoException;
 
-public final class Moto extends Veiculo {
+public final class Moto extends VeiculoBase {
 	
 	public Moto() {
 		this.quantidadeRodas = 2;

@@ -2,16 +2,18 @@ package br.com.treinaweb.javaoo.main;
 
 import br.com.treinaweb.javaoo.classes.Carro;
 import br.com.treinaweb.javaoo.classes.Moto;
-import br.com.treinaweb.javaoo.classes.Veiculo;
+import br.com.treinaweb.javaoo.classes.VeiculoBase;
 import br.com.treinaweb.javaoo.excecoes.AbastecimentoVeiculoLigadoException;
 import br.com.treinaweb.javaoo.excecoes.ChassiInvalidoException;
+import br.com.treinaweb.javaoo.interfaces.Andador;
+import br.com.treinaweb.javaoo.interfaces.Veiculo;
 
 public class Main {
 
 	public static void main(String[] args) {
 		try {
 			//Carro corsa = new Carro("Corsa", "GM");
-			Veiculo corsa = new Carro("Corsa", "GM"); // Polimorfismo
+			VeiculoBase corsa = new Carro("Corsa", "GM"); // Polimorfismo
 			corsa.setChassi("ABCDE");
 			corsa.abastecer(10);
 			// ((Carro)corsa).setQuantidadePortas(4);
