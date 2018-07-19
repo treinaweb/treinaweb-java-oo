@@ -1,5 +1,7 @@
 package br.com.treinaweb.javaoo.classes;
 
+import br.com.treinaweb.javaoo.excecoes.ChassiInvalidoException;
+
 public class Veiculo {
 
 	private String nome;

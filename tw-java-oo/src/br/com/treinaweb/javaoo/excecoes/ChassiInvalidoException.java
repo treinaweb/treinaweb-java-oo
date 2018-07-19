@@ -1,6 +1,6 @@
 package br.com.treinaweb.javaoo.excecoes;
 
-class ChassiInvalidoException extends Exception {
+public class ChassiInvalidoException extends Exception {
 
 
 }
