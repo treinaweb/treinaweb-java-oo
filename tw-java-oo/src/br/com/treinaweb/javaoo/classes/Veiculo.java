@@ -5,7 +5,7 @@ import br.com.treinaweb.javaoo.excecoes.AceleracaoVeiculoLigadoException;
 import br.com.treinaweb.javaoo.excecoes.ChassiInvalidoException;
 import br.com.treinaweb.javaoo.excecoes.FrenagemVeiculoDesligadoException;
 
-public class Veiculo {
+public abstract class Veiculo {
 
 	private String nome;
 	private String marca;
