@@ -7,4 +7,12 @@ public class Veiculo {
 	public String chassi;
 	public int quantidadeRodas;
 	
+	public void ligar() {
+		System.out.println("O veículo ligou!");
+	}
+	
+	public void desligar() {
+		System.out.println("O veículo desligou!");
+	}
+	
 }
