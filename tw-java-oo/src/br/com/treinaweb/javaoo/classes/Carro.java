@@ -22,4 +22,9 @@ public final class Carro extends Veiculo {
 		this.setMarca(marca);
 	}
 
+	@Override
+	public void preparar() {
+		System.out.println("Colocar o cinto de segurança.");
+	}
+
 }

@@ -11,7 +11,7 @@ public class Main {
 	public static void main(String[] args) {
 		try {
 			//Carro corsa = new Carro("Corsa", "GM");
-			Veiculo corsa = new Moto("Corsa", "GM"); // Polimorfismo
+			Veiculo corsa = new Carro("Corsa", "GM"); // Polimorfismo
 			corsa.setChassi("ABCDE");
 			corsa.abastecer(10);
 			// ((Carro)corsa).setQuantidadePortas(4);
@@ -20,6 +20,7 @@ public class Main {
 			System.out.println(corsa.getQuantidadeRodas());
 			System.out.println(String.format("O veículo %s está ligado? %b", corsa.getNome(), corsa.isLigado()));
 			corsa.abastecer(10);
+			corsa.preparar();
 			corsa.ligar();
 			corsa.acelerar();
 			System.out.println(String.format("Velocidade atual do veículo: %f", corsa.getVelocidade()));

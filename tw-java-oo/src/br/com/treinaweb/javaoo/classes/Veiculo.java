@@ -99,4 +99,6 @@ public abstract class Veiculo {
 			throw new FrenagemVeiculoDesligadoException();
 		}
 	}
+	
+	public abstract void preparar();
 }
