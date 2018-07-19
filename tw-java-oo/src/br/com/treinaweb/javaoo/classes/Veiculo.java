@@ -64,19 +64,19 @@ public class Veiculo {
 		return velocidade;
 	}
 
-	public void ligar() {
+	public final void ligar() {
 		this.ligado = true;
 		this.velocidade = 0;
 		System.out.println("O veículo ligou!");
 	}
 	
-	public void desligar() {
+	public final void desligar() {
 		this.ligado = false;
 		this.velocidade = 0;
 		System.out.println("O veículo desligou!");
 	}
 	
-	public void abastecer(float litros) throws AbastecimentoVeiculoLigadoException {
+	public final void abastecer(float litros) throws AbastecimentoVeiculoLigadoException {
 		if (!this.ligado) {
 			quantidadeCombustivel += litros;
 		} else {
