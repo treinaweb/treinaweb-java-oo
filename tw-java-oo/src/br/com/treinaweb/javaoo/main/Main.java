@@ -11,20 +11,20 @@ public class Main {
 	public static void main(String[] args) {
 		try {
 			//Carro corsa = new Carro("Corsa", "GM");
-			Veiculo corsa = new Carro("Corsa", "GM"); // Polimorfismo
+			Veiculo corsa = new Moto("Corsa", "GM"); // Polimorfismo
 			corsa.setChassi("ABCDE");
 			corsa.abastecer(10);
-			((Carro)corsa).setQuantidadePortas(4);
+			// ((Carro)corsa).setQuantidadePortas(4);
 			System.out.println(corsa.getNome());
 			System.out.println(corsa.getQuantidadeCombustivel());
 			System.out.println(corsa.getQuantidadeRodas());
 			System.out.println(String.format("O veículo %s está ligado? %b", corsa.getNome(), corsa.isLigado()));
 			corsa.abastecer(10);
 			corsa.ligar();
-			// corsa.abastecer(10);
-			// Moto fazer = new Moto();
-			// fazer.setMarca("Yamaha");
-			// fazer.setNome("Fazer");
+			corsa.acelerar();
+			System.out.println(String.format("Velocidade atual do veículo: %f", corsa.getVelocidade()));
+			corsa.frear();
+			System.out.println(String.format("Velocidade atual do veículo: %f", corsa.getVelocidade()));
 		} catch (AbastecimentoVeiculoLigadoException e) {
 			System.out.println("Você não pode abastecer um veículo enquanto ele estiver ligado.");
 		} catch (ChassiInvalidoException e) {
