@@ -1,5 +1,6 @@
 package br.com.treinaweb.javaoo.classes;
 
+import br.com.treinaweb.javaoo.excecoes.AbastecimentoVeiculoLigadoException;
 import br.com.treinaweb.javaoo.excecoes.ChassiInvalidoException;
 
 public class Veiculo {
@@ -12,7 +13,7 @@ public class Veiculo {
 	private Boolean ligado;
 	
 	public Veiculo() {
-		this.ligado = true;
+		this.ligado = false;
 	}
 	
 	public String getNome() {
@@ -35,7 +36,7 @@ public class Veiculo {
 		return chassi;
 	}
 
-	public void setChassi(String chassi) throws Exception {
+	public void setChassi(String chassi) throws ChassiInvalidoException {
 		if (chassi.length() == 5) {
 			this.chassi = chassi;
 		} else {
@@ -65,7 +66,11 @@ public class Veiculo {
 		System.out.println("O veículo desligou!");
 	}
 	
-	public void abastecer(float litros) {
-		quantidadeCombustivel += litros;
+	public void abastecer(float litros) throws AbastecimentoVeiculoLigadoException {
+		if (!this.ligado) {
+			quantidadeCombustivel += litros;
+		} else {
+			throw new AbastecimentoVeiculoLigadoException();
+		}		
 	}
 }
