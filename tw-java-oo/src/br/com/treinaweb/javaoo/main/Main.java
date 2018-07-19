@@ -13,6 +13,7 @@ public class Main {
 			corsa.abastecer(10);
 			System.out.println(corsa.getNome());
 			System.out.println(corsa.getQuantidadeCombustivel());
+			System.out.println(corsa.getQuantidadeRodas());
 			corsa.ligar();
 		} catch (Exception e) {
 			System.out.println("** Ocorreu um erro: " + e.getMessage());
